@@ -21,9 +21,6 @@ public class Conta {
     }
     public Conta(Integer numConta, String titular, Double saldo, Double limiteSaque) throws DomainException {
        
-        if(limiteSaque==null){
-        throw new DomainException("Digite um limite de saque para o cliente");
-        }
         this.numConta = numConta;
         this.titular = titular;
         this.saldo = saldo;
@@ -43,9 +40,7 @@ public class Conta {
     }
 
     public void setLimiteSaque(Double limiteSaque)throws DomainException {
-        if(limiteSaque==null){
-        throw new DomainException ("Limite de saque nao pode ser zero");
-        }
+        
         this.limiteSaque = limiteSaque;
     }
 
